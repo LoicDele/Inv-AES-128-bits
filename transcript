@@ -1,0 +1,45 @@
+# //  ModelSim SE-64 10.0 Dec  4 2010 Linux 2.6.32-431.el6.x86_64
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim bench.FSM_tb 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading aeslibrary.state_definition_package(body)
+# Loading work.fsm_tb(fsm_tb_arch)#1
+quit -sim
+vsim -novopt bench.fsm_tb
+# vsim -novopt bench.fsm_tb 
+# Loading std.standard
+# Refreshing /eleves/home/loic.deleforterie/2A/VHDL/lib/bench.fsm_tb(fsm_tb_arch)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading aeslibrary.state_definition_package(body)
+# Loading bench.fsm_tb(fsm_tb_arch)
+# Refreshing /eleves/home/loic.deleforterie/2A/VHDL/lib/source.fsm(fsm_moore_arch)
+# Loading source.fsm(fsm_moore_arch)
+add wave \
+{sim:/fsm_tb/DUT/clock_i } \
+{sim:/fsm_tb/DUT/done_o } \
+{sim:/fsm_tb/DUT/enableCounter_o } \
+{sim:/fsm_tb/DUT/enableMixColumns_o } \
+{sim:/fsm_tb/DUT/enableOutput_o } \
+{sim:/fsm_tb/DUT/enableRoundcomputing_o } \
+{sim:/fsm_tb/DUT/etat_present } \
+{sim:/fsm_tb/DUT/getciphertext_o } \
+{sim:/fsm_tb/DUT/resetb_i } \
+{sim:/fsm_tb/DUT/resetCounter_o } \
+{sim:/fsm_tb/DUT/round_i } \
+{sim:/fsm_tb/DUT/start_i } 
+radix -h
+# hexadecimal
+run 1200 ns
